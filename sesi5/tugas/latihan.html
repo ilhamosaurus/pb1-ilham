@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan</title>
+  </head>
+  <body>
+    <label for="pesan">Pesan:</label
+    ><input type="text" id="pesan" name="pesan" /><br />
+    <label for="multiply">Berapa kali:</label
+    ><input type="number" id="multiply" name="multiply" /><br />
+    <button onclick="cetak()">Cetak!</button>
+    <ol id="hasil"></ol>
+
+    <script>
+      let pesan = document.getElementById('pesan');
+      let multiply = document.getElementById('multiply');
+      let hasil = document.getElementById('hasil');
+      let count = 0;
+      function cetak() {
+        while (count < multiply.value) {
+          hasil.innerHTML = hasil.innerHTML + `<li>${pesan.value}</li>`;
+          count++;
+        }
+      }
+    </script>
+  </body>
+</html>

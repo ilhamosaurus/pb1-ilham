@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Belajar Click Event</title>
+</head>
+<body>
+  <h3>Belajar Click Event</h3>
+  <button id="button" onclick="ubahButton()">Klik Aku!</button>
+  <p id="hasil"></p>
+</body>
+<script>
+  function ubahButton() {
+    let button = document.getElementById('button');
+    let hasil = document.getElementById('hasil');
+    outpur = ''
+    if (button.innerHTML == 'Klik Aku!') {
+      button.innerHTML = 'Halo Guys!'
+      output = "Kita ngeklik nih btw!"
+    } else {
+      button.innerHTML = 'Klik Aku!'
+      output = "Udah bosen sama aku?"
+    }
+    hasil.innerHTML = output
+  }
+</script>
+</html>

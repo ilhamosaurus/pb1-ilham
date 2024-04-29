@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Maju Mundur</title>
+  </head>
+  <body>
+    <div>
+      <button id="maju" onclick="maju()">Maju</button>
+      <button id="mundur" onclick="mundur()">Mundur</button>
+      <p id="hasil">0</p>
+    </div>
+  </body>
+  <script>
+    let hasil = document.getElementById('hasil');
+    let nilai = 0;
+    function maju() {
+      if (nilai < 10) {
+        nilai++;
+        hasil.innerHTML = nilai;
+      } else {
+        hasil.innerHTML = 'Mentok Juragan!';
+      }
+    }
+
+    function mundur() {
+      if (nilai > 0) {
+        nilai--;
+        hasil.innerHTML = nilai;
+      } else {
+        hasil.innerHTML = 'Ganjel Juragan!';
+      }
+    }
+  </script>
+</html>

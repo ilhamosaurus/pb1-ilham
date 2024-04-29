@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Huruf Mutu</title>
+  </head>
+  <body>
+    <h3>Belajar Huruf Mutu</h3>
+    <div id="input">
+        <label for="nilai">Masukkan nilai anda:</label>
+        <input type="text" name="nilai" id="nilai" />
+        <button onclick="cekHurufMutu()">Ubah</button>
+    </div>
+    <div id="hasil">
+      <p id="hasil-nilai">Nilai:</p>
+      <p id="huruf">Hasil perubahan nilai anda:</p>
+    </div>
+  </body>
+  <script>
+    function cekHurufMutu() {
+      let nilai = document.getElementById('nilai').value;
+      let huruf = '';
+      let hasilHuruf = document.getElementById('huruf');
+      let hasilNilai = document.getElementById('hasil-nilai');
+      if (nilai >= 80 && nilai <= 100) {
+        huruf = 'A';
+      } else if (nilai >= 70 && nilai <= 79) {
+        huruf = 'B';
+      } else if (nilai >= 60 && nilai <= 69) {
+        huruf = 'C';
+      } else if (nilai >= 50 && nilai <= 59) {
+        huruf = 'D';
+      } else if (nilai >= 0 && nilai <= 49) {
+        huruf = 'E';
+      } else {
+        huruf = 'Nilai yang anda masukkan salah';
+      }
+      hasilHuruf.innerHTML = `Hasil perubahan nilai: ${huruf}`;
+      hasilNilai.innerHTML = `Nilai: ${nilai}`;
+    }
+  </script>
+</html>
