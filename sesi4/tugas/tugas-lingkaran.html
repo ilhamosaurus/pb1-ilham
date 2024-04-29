@@ -75,6 +75,7 @@
       luas.innerHTML = `Langkah 1: Substitusi nilai jari-jari (${jariLingkaran}) dan nilai phi (${phi}) ke rumus luas lingkaran`;
       luas2.innerHTML = `Luas Lingkaran = ${phi} x ${jariLingkaran} x ${jariLingkaran}`;
       // Menampilkan hasil luas
+      console.log('luasLingkaran: ', luasLingkaran)
       hasilLuas.innerHTML = `Hasil: ${luasLingkaran.toFixed(2)}`;
       // Menghitung keliling
       let kelilingLingkaran = 2 * phi * jariLingkaran;
@@ -82,6 +83,7 @@
       keliling.innerHTML = `Langkah 1: Substitusi nilai jari-jari (${jariLingkaran}) dan nilai phi (${phi}) ke rumus keliling lingkaran`;
       keliling2.innerHTML = `Keliling Lingkaran = 2 x ${phi} x ${jariLingkaran}`;
       // Menampilkan hasil keliling
+      console.log('kelilingLingkaran: ', kelilingLingkaran);
       hasilKeliling.innerHTML = `Hasil: ${kelilingLingkaran.toFixed(2)}`;
     });
   </script>
