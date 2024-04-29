@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cara Menghitung Luas dan Keliling Lingkaran</title>
+  </head>
+  <body>
+    <div id="judul">
+      <h1>Cara Menghitung Luas dan Keliling Lingkaran</h1>
+    </div>
+    <div id="variabel">
+      <div id="rumus">
+        <h2>Rumus</h2>
+        <p>r = jari-jari</p>
+        <p>Luas Lingkaran = phi x r x r</p>
+        <p>Keliling Lingkaran = phi x r x 2</p>
+      </div>
+      <div id="phi">
+        <h2>Nilai Phi</h2>
+        <p>
+          Dalam tugas ini kita akan menggunakan nilai phi sebagai berikut:
+          3,141592653589793.
+        </p>
+      </div>
+      <div id="jari-jari">
+        <form action="">
+          <label for="jari-jari">Silahkan masukkan nilai jari-jari:</label>
+          <input type="number" name="jari" id="jari" />
+          <button type="submit">Hitung</button>
+        </form>
+      </div>
+      <div id="result">
+        <div id="langkah">
+          <h2>Langkah Mengerjakan</h2>
+          <div id="luas">
+            <h3>Luas Lingkaran</h3>
+            <p>Luas Lingkaran = phi x r x r</p>
+            <p id="langkah-pertama"></p>
+            <p id="langkah-kedua"></p>
+            <p id="hasil"></p>
+          </div>
+          <div id="keliling">
+            <h3>Keliling Lingkaran</h3>
+            <p>Keliling Lingkaran = phi x r x 2</p>
+            <p id="langkah-pertama-keliling"></p>
+            <p id="langkah-kedua-keliling"></p>
+            <p id="hasil-keliling"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      nb: nilai hasil yang ditampilkan adalah nialah pembulatan dengan 2 angka
+      dibelakang koma
+    </footer>
+  </body>
+  <script>
+    let r = document.getElementById('jari');
+    let luas = document.getElementById('langkah-pertama');
+    let keliling = document.getElementById('langkah-pertama-keliling');
+    let luas2 = document.getElementById('langkah-kedua');
+    let keliling2 = document.getElementById('langkah-kedua-keliling');
+    let hasilLuas = document.getElementById('hasil');
+    let hasilKeliling = document.getElementById('hasil-keliling');
+    const phi = 3.14159265358979323846;
+
+    document.querySelector('form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      // Mendapatkan nilai jari-jari
+      let jariLingkaran = parseFloat(r.value);
+      // Menghitung luas
+      let luasLingkaran = phi * jariLingkaran * jariLingkaran;
+      // Menampilkan langkah kalkulasi luas
+      luas.innerHTML = `Langkah 1: Substitusi nilai jari-jari (${jariLingkaran}) dan nilai phi (${phi}) ke rumus luas lingkaran`;
+      luas2.innerHTML = `Luas Lingkaran = ${phi} x ${jariLingkaran} x ${jariLingkaran}`;
+      // Menampilkan hasil luas
+      hasilLuas.innerHTML = `Hasil: ${luasLingkaran.toFixed(2)}`;
+      // Menghitung keliling
+      let kelilingLingkaran = 2 * phi * jariLingkaran;
+      // Menampilkan langkah kalkulasi keliling
+      keliling.innerHTML = `Langkah 1: Substitusi nilai jari-jari (${jariLingkaran}) dan nilai phi (${phi}) ke rumus keliling lingkaran`;
+      keliling2.innerHTML = `Keliling Lingkaran = 2 x ${phi} x ${jariLingkaran}`;
+      // Menampilkan hasil keliling
+      hasilKeliling.innerHTML = `Hasil: ${kelilingLingkaran.toFixed(2)}`;
+    });
+  </script>
+</html>
